@@ -1,4 +1,4 @@
-# Exercise 1: a real world application
+# Exercise 1: a real world application (ext_changer.sh is the solution)
 
 In this exercise we are going to try something I had to do for real once in my life in research.
 
