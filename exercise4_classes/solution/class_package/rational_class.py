@@ -6,7 +6,7 @@ from class_package import alt_rational_mod as arm
 class rational () :
     """This class creates a new type called "rational". It has a positional argument "num" which is the number from which its rational version is obtained and two keyword arguments "precision", the precision with which the ratio approximates "num", default at 1e-5, and "algorithm", which is the choice of the algorithm to compute the ratio, either continued fraction algorithm ("cont_fract" as default) or a naive one ("naive_alg").
     """
-    
+   
     def __init__ (self, num, precision = 1.e-5, algorithm = "cont_fract"):
         if precision<0 or precision>1:
             sys.exit("The precision used is not between [0,1]")
