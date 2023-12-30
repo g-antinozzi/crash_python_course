@@ -4,7 +4,7 @@ from class_package import cont_fract_mod as cfm
 from class_package import alt_rational_mod as arm
 
 class rational () :
-    """Documentation of the class
+    """This class creates a new type called "rational". [...]
     """
     
     def __init__ (self, num, precision = 1.e-5, algorithm = "cont_fract"):
