@@ -4,7 +4,7 @@ from class_package import cont_fract_mod as cfm
 from class_package import alt_rational_mod as arm
 
 class rational () :
-    """Documentation of the class
+    """This class creates a new type called "rational". It has a positional argument "num" which is the number from which its rational version is obtained and two keyword arguments "precision", the precision with which the ratio approximates "num", default at 1e-5, and "algorithm", which is the choice of the algorithm to compute the ratio, either continued fraction algorithm ("cont_fract" as default) or a naive one ("naive_alg").
     """
     
     def __init__ (self, num, precision = 1.e-5, algorithm = "cont_fract"):
@@ -33,6 +33,7 @@ class rational () :
             else:
                 self.numerator = naive_alg_list[0]
                 
+    #Representation operators
     
     def __str__ ( self ) :
         return f'{self.numerator}/{self.denominator}'
@@ -40,7 +41,8 @@ class rational () :
     def __repr__ ( self ) :
         return f'{type(self).__name__}({self.num}, precision={self.precision})'    
     
-    # overload of the arithmetic operators
+    #Arithmetic operators
+    
     def __abs__ (self) :
         return type(self) (abs(self.numerator)/self.denominator)
     
@@ -57,7 +59,7 @@ class rational () :
         return type(self) ((self.numerator/self.denominator)/(other.numerator/other.denominator))
     
     
-    # overload of some comparison operators
+    #Comparison operators
     
     def __eq__ (self, other) :
         return (self.numerator, self.denominator) == (other.numerator, other.denominator)
@@ -83,17 +85,3 @@ class rational () :
     
     def __float__ (self) :
         return float(self.numerator/self.denominator)
-    
-    
-
-    ####################################################
-    # Optional functions:
-    
-    #def __hash__ ( self ) :
-    #	pass
-    #def to_integer_low ( self ) :
-    # 	"""Documentation of function `to_integer_low`"""
-    #	pass
-    #def to_integer_upp ( self ) :
-    #  	"""Documentation of function `to_integer_upp`"""
-    # 	pass
